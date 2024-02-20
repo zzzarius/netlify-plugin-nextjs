@@ -3,7 +3,7 @@
         var { createRequire } = await import("node:module");
         return createRequire(import.meta.url);
       })();
-    
+
 import {
   require_out
 } from "./chunk-VZNKO4OO.js";
@@ -21,12 +21,14 @@ import { cp, mkdir, readFile, readdir, readlink, symlink, writeFile } from "node
 import { createRequire } from "node:module";
 import { dirname, join, resolve } from "node:path";
 var copyNextServerCode = async (ctx) => {
+  console.log(JSON.stringify({ ctx }, null, 2));
   const reqServerFilesPath = join(
     ctx.standaloneRootDir,
     ctx.relPublishDir,
     "required-server-files.json"
   );
   const reqServerFiles = JSON.parse(await readFile(reqServerFilesPath, "utf-8"));
+  console.log(JSON.stringify({ reqServerFiles }, null, 2));
   if (ctx.distDir.replace(new RegExp(`^${ctx.packagePath}/?`), "") !== reqServerFiles.config.distDir) {
     reqServerFiles.config.distDir = ctx.nextDistDir;
     await writeFile(reqServerFilesPath, JSON.stringify(reqServerFiles));
