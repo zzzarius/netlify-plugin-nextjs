@@ -3,12 +3,12 @@
         var { createRequire } = await import("node:module");
         return createRequire(import.meta.url);
       })();
-    
+
 import "./chunk-5JVNISGM.js";
 
 // package.json
 var name = "@netlify/plugin-nextjs";
-var version = "5.0.0-beta.9";
+var version = "5.0.0-beta.9-zzzarius";
 var description = "Run Next.js seamlessly on Netlify";
 var main = "./dist/index.js";
 var type = "module";
