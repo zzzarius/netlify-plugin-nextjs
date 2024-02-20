@@ -3,7 +3,7 @@
         var { createRequire } = await import("node:module");
         return createRequire(import.meta.url);
       })();
-    
+
 
 // src/build/plugin-context.ts
 import { readFileSync } from "node:fs";
@@ -149,6 +149,7 @@ var PluginContext = class {
   _buildConfig = null;
   /** Get Next Config from build output **/
   get buildConfig() {
+    console.log(JSON.stringify({ publishDir: this.publishDir, _buildConfig: this._buildConfig }, null, 2))
     if (!this._buildConfig) {
       this._buildConfig = JSON.parse(
         readFileSync(join(this.publishDir, "required-server-files.json"), "utf-8")
