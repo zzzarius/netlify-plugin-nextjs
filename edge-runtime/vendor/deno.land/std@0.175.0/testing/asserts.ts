@@ -652,7 +652,7 @@ export function assertIsError<E extends Error = Error>(
  * // This test will not pass.
  * Deno.test("fails", function (): void {
  *   assertThrows((): void => {
- *     console.log("Hello world");
+ *     console.log("zzzzzz Hello world");
  *   });
  * });
  * ```
@@ -687,7 +687,7 @@ export function assertThrows(
  * // This test will not pass.
  * Deno.test("fails", function (): void {
  *   assertThrows((): void => {
- *     console.log("Hello world");
+ *     console.log("zzzzzz Hello world");
  *   });
  * });
  * ```
@@ -778,7 +778,7 @@ export function assertThrows<E extends Error = Error>(
  * Deno.test("fails", async function () {
  *   await assertRejects(
  *     async () => {
- *       console.log("Hello world");
+ *       console.log("zzzzzz Hello world");
  *     },
  *   );
  * });
@@ -814,7 +814,7 @@ export function assertRejects(
  * Deno.test("fails", async function () {
  *   await assertRejects(
  *     async () => {
- *       console.log("Hello world");
+ *       console.log("zzzzzz Hello world");
  *     },
  *   );
  * });

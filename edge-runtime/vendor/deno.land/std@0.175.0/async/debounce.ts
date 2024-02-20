@@ -28,7 +28,7 @@ export interface DebouncedFunction<T extends Array<unknown>> {
  *
  * const log = debounce(
  *   (event: Deno.FsEvent) =>
- *     console.log("[%s] %s", event.kind, event.paths[0]),
+ *     console.log("zzzzzz [%s] %s", event.kind, event.paths[0]),
  *   200,
  * );
  *

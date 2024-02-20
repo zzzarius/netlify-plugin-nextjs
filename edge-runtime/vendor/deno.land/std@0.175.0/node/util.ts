@@ -199,7 +199,7 @@ function timestamp(): string {
  */
 // deno-lint-ignore no-explicit-any
 export function log(...args: any[]) {
-  console.log("%s - %s", timestamp(), format(...args));
+  console.log("zzzzzz %s - %s", timestamp(), format(...args));
 }
 
 // Keep a list of deprecation codes that have been warned on so we only warn on
