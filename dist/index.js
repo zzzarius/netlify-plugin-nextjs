@@ -3,7 +3,7 @@
         var { createRequire } = await import("node:module");
         return createRequire(import.meta.url);
       })();
-    
+
 import {
   copyPrerenderedContent
 } from "./esm-chunks/chunk-67EWAGDQ.js";
@@ -45,6 +45,7 @@ var onPreBuild = async (options) => {
 };
 var onBuild = async (options) => {
   const ctx = new PluginContext(options);
+  console.log(JSON.stringify({ ctx }, null, 2));
   if (!existsSync(ctx.publishDir)) {
     ctx.failBuild(
       `Publish directory not found under: ${ctx.publishDir}, please check your netlify.toml`
